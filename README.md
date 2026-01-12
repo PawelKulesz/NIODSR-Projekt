@@ -3,8 +3,10 @@
 Projekt NIODSR. Sterowanie robocikiem.
 
 ## Funkcjonalności
-- Możliwość jazdy do przodu poprzez kliknięcie w górną część okna
-- Możliwość jazdy do tyłu poprzez kliknięcie w dolną część okna
+### Obsługa kodów Aruco
+- Jazda do przodu poprzez pokazanie kodu Aruco w górnej części ekranu
+- Jazda do tyłu poprzez pokazanie kodu Aruco w dolnej części ekranu
+- Postój robota gdy kamera nie widzi żadnego kodu Aruco
 
 ## Wymagania
 - ROS 2 Humble
