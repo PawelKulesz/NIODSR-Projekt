@@ -33,6 +33,5 @@ source install/setup.bash <br />
 
 #### Terminal 2:
 - cd ~/ros2_ws
-- source install/setup.bash
+- source /opt/ros/humble/setup.bash
 - ros2 launch camera_subscriber project.launch.py
-
