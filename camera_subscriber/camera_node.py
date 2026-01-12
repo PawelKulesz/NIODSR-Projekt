@@ -30,6 +30,9 @@ class MinimalSubscriber(Node):
 
         self.timer = self.create_timer(0.05, self.timer_callback)
 
+    def listener_callback(self, image_data):
+        pass
+
 
     def timer_callback(self):
         cv_image = np.zeros((512, 700, 3), np.uint8)
@@ -53,7 +56,6 @@ class MinimalSubscriber(Node):
             msg.x = float(x)
             msg.y = float(y)
             self.publisher_.publish(msg)
-            # self.get_logger().info(f'Published point: {msg.x}, {msg.y}')
 
 
 def main(args=None):
