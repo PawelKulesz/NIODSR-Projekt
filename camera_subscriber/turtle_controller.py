@@ -26,8 +26,8 @@ class TurtleController(Node):
             self.linear_x = 0.5
             self.get_logger().info("Jazda do przodu")
         else:
-            self.linear_x = 0.0
-            self.get_logger().info("Zatrzymanie")
+            self.linear_x = -0.5
+            self.get_logger().info("Jazda do tylu")
 
     def timer_callback(self):
         msg = Twist()
