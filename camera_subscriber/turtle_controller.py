@@ -7,22 +7,21 @@ from geometry_msgs.msg import Twist, Point
 class TurtleController(Node):
     def __init__(self):
         super().__init__('turtle_controller')
-
         self.publisher_ = self.create_publisher(Twist, '/cmd_vel', 10)
-
         self.subscription = self.create_subscription(
             Point,
             '/point',
             self.listener_callback,
             10)
-
         self.timer = self.create_timer(0.1, self.timer_callback)
-
         self.linear_x = 0.0
         self.angular_z = 0.0
 
     def listener_callback(self, msg):
-        if msg.y < 256:
+        if msg.z == 0.0:
+            self.linear_x = 0.0
+            self.get_logger().info("Postój")
+        elif msg.y < 240.0:
             self.linear_x = 0.5
             self.get_logger().info("Jazda do przodu")
         else:
