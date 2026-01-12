@@ -24,12 +24,13 @@ colcon build --packages-select camera_subscriber <br />
 source install/setup.bash <br />
 
 ### Uruchomienie
-Terminal 1:
+#### Terminal 1:
 - source /opt/ros/humble/setup.bash
 - export TURTLEBOT3_MODEL=burger
 - ros2 launch turtlebot3_gazebo empty_world.launch.py
 <br />
-Terminal 2:
+#### Terminal 2:
 - cd ~/ros2_ws
 - source install/setup.bash
 - ros2 launch camera_subscriber project.launch.py
+<br />
